@@ -2,7 +2,7 @@
 
 ## Objective
 
-Create a simple combat simulation program in C++ that uses variables and conditionals to simulate a combat encounter between a player and an enemy.
+Create a simple combat simulation program in C++ that uses enums, variables, and conditionals to simulate a combat encounter between a player and an enemy.
 
 ## Requirements
 
@@ -10,6 +10,7 @@ Create a simple combat simulation program in C++ that uses variables and conditi
 
 The program should:
 - Ask the player for their character's name and weapon choice.
+- Use an enum to represent different weapon types.
 - Use variables to store the player's health and attack power.
 - Use conditionals to determine the outcome of a single combat encounter.
 - Display the combat results based on the player's and enemy's actions.
@@ -18,7 +19,7 @@ The program should:
 
 The program should collect the following inputs:
 - Player's name (string)
-- Weapon choice (string): Sword, Bow, or Staff
+- Weapon choice (enum): Sword, Bow, or Staff
 
 ### Output
 
@@ -31,17 +32,19 @@ The program should display the combat actions and results, including the player'
 - Create a new C++ project and set up your development environment.
 - Include necessary headers (`<iostream>`, `<string>`).
 
-### 2. Define Variables
+### 2. Define Enums and Variables
 
+- Define an enum for weapon types.
 - Define variables for player's name, weapon choice, player health, enemy health, player attack power, and enemy attack power.
 
 ### 3. Prompt User for Input
 
-- Use `std::cin` to collect the player's name and weapon choice.
+- Use `std::cin` to collect the player's name.
+- Use `std::cin` to collect the player's weapon choice and cast it to the corresponding enum value.
 
 ### 4. Assign Attack Power
 
-- Use conditionals (`if`, `else if`, `else`) to set the player's attack power based on the chosen weapon.
+- Use conditionals (`if`, `else if`, `else`, `switch `) to set the player's attack power based on the chosen weapon enum.
 
 ### 5. Combat Simulation
 
@@ -51,7 +54,7 @@ The program should display the combat actions and results, including the player'
 
 ```plaintext
 Enter your character's name: Arthur
-Choose your weapon (Sword, Bow, Staff): Sword
+Choose your weapon (1: Sword, 2: Bow, 3: Staff): 1
 
 Combat Simulation:
 Arthur attacks the enemy with Sword!
